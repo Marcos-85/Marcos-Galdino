@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .imagem {
+            margin-top: 50px; /* Adiciona espaço entre o título e a imagem */
+            display: none; /* Oculta a imagem por padrão */
+        }
+    </style>
+    <script>
+        function mudarTexto() {
+            document.getElementById("titulo").textContent = "Obrigado por ser minha vítima";
+            // Remove o botão
+            document.getElementById("botao").parentNode.removeChild(document.getElementById("botao"));
+            // Exibe a imagem
+            document.querySelector(".imagem").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="titulo">Olá! Aparelho infectado. Clique no botão para ativar o antivirus</h1>
+    <button id="botao" onclick="mudarTexto()">Clique aqui</button>
+    <div class="imagem">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvXX8w3W-dXnQMaveL2W65TEnFmXezMyZPQ1DtGgs9-A&s" alt="Descrição da imagem">
+    </div>
+</body>
+</html>
